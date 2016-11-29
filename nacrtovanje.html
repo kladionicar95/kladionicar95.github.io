@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>IRFoton - Izdelaj si ponudbo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+    <link rel="stylesheet" href="css/indexcss.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-content centered-content">
+        <a href="nacrtovanje.html"><img src="img/logo.png" class= "logo" width="120" alt="logoFirme"/></a>
+        <div class="menu-links"><a class="active" href="nacrtovanje.html">Domov</a></div>
+        <div class="menu-links"><a href="podatki.html">Podatki</a></div>
+        <div class="menu-links"><a href="ogrevanje.html">O ogrevanju</a></div>
+        <div class="menu-links"><a href="index.html">Izpiši</a></div>
+      </div>
+    </header>
+    <div class="main centered-content" id="tloris">
+      <div class="sobe" id = "sobeDiv">
+          <div id="soba1">
+            <span style="line-height:30px;"><b>VNOS SOBE</b></span><br/>
+            <form method= "POST" id="vstavi-sobo">
+                <label>Ime sobe</label> 
+                <div class= "vnos">
+                  <input type="text" id ="imeSobe" name="ime" title="Vpišite ime sobe" placeholder="npr. kuhinja" required /><br/>
+                </div><br/>
+                <label>Dolžina(m<sup>2</sup>):</label> 
+                <div class= "vnos">
+                  <input type="number" name="dolzina" id = "merax1" required />
+                </div><br/>
+                <label>Širina(m<sup>2</sup>):</label> 
+                <div class= "vnos">
+                  <input type="number" name="sirina" id = "meray1" required />
+                </div><br/>
+                <label id ="st-sten-text">Število zunanjih sten: </label> 
+                <div class= "vnos">
+                  <input type="number" name="sirina" id = "ststen1" class="st-sten" required />
+                </div><br>
+                <label>Namembnost sobe:</label>
+                <div class= "vnos">
+                  <select name="namembnost" id="namembnost1">
+                    <option value="24">spalnica</option>
+                    <option value="24">kuhinja</option>
+                    <option value="24">hodnik</option>
+                    <option value="28">dnevna soba</option>
+                    <option value="28">delovna soba</option>
+                    <option value="28">kuhinja</option>
+                    <option value="36">kopalnica</option>
+                  </select>
+                </div><br><br><br>
+              <label><input type="submit" value="Pošlji sobo" class ="novasoba" id = "1"/></label>
+            </form>
+            <!--<button id ="obrni" value = "Obrni">Zarotiraj sobo</button>-->
+          </div>
+          <input type="button" value="Izracunaj" class ="izracunaj" id = "izracunBtn"/>
+      </div>
+      <div class = "toggleDiv" id ="toggleDivId">
+        <button id ="toggle"><i class="material-icons">tune</i></button>
+      </div>
+      <div class="content">
+        <span>Naloži tloris: </span><input type="file" id= "uplImg"><br>
+        <div id="videoDiv" style = "visibility:hidden;">
+          <video id="videoEle" width="640" height="480" autoplay></video><br>
+          <input type=button value="Save Image" style="float:left;" id="saveImgButton"/><br>
+        </div>
+        <input type=button value="Zajemi tloris iz Webkamere" id="camOnButton"/><br>
+        <canvas id="c" style="display:none;" width="1280" height="960"></canvas>
+        <div id = "tloris-div" style="background-image: url(https://dummyimage.com/1280x960/fff/fff.png)">
+         <img id ="tloris-hidden" alt ="tloris" src='https://dummyimage.com/1280x960/fff/fff.png' style='visibility: hidden;' />
+        <div id="merilo">
+          <span><b>Merilo</b></span>
+          <div id = "meritev-vpis">
+            <form class="potrdi-meritev" id="vpisMerila">
+              <input type="text"  form="vstavi-sobo" name="mer" style="width:30px;" id = "meritev" required /> <span>m</span> 
+              <div id = "meritevBtn">
+                <input type="submit" value="Potrdi" style="width: 50px; padding:3px;"/>
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span>
+        Spletno stran izdelal Klemen Moderc
+      </span>
+    </footer>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>    
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+      <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html> 

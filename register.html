@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <title>IRFoton - Registracija</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+  <link rel="stylesheet" href="css/logincss.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script type="text/javascript">
+   function testGesli()
+   {
+    if(document.getElementById("psw").value!=document.getElementById("psw1").value){
+    alert ("Gesli nista enaki!");
+    return false;
+    }
+   }
+  </script>
+  <body>
+  <form method = "post" action="index.html" onsubmit="return testGesli();">
+    <div class="imgcontainer">
+      <img src="img/logo.png" alt="Avatar">
+    </div>
+    <div class="container">
+      <h3><b>Registracija</b></h3>
+      <label>Uporabniško ime</label>
+      <input type="text" placeholder="Vnesi uporabniško ime" name="uname" required>
+      <label>Geslo</label>
+      <input type="password" placeholder="Vnesi geslo" name="psw" id = "psw" required>
+      <label>Ponovi geslo</label>
+      <input type="password" placeholder="Ponovi vnešeno geslo" name="reppsw" id = "psw1" required>
+      <label>E-mail</label>
+      <input type="email" placeholder="Vnesi e-mail" name="email" required><br/><br/>            
+      <input type="checkbox" checked="checked"> Ali si človek?<br/><br/> 
+      <button type="submit" >Registracija</button>
+      <br/>
+    </div>
+      <div class="container" style="background-color:#f1f1f1">
+      <span>Imaš že uporabniški račun?</span>
+      <a href= "index.html">
+        <button type="button" class="registerbtn">Prijava</button>
+      </a>
+      </div>
+  </form>
+  </body>
+</html>

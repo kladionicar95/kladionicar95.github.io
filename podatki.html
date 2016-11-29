@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>IRFoton - Izdelaj si ponudbo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+    <link rel="stylesheet" href="css/indexcss.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-content centered-content">
+        <a href="nacrtovanje.html"><img src="img/logo.png" class= "logo" width="120" alt = "logoPodjetja"/></a>
+        <div class="menu-links"><a href="nacrtovanje.html">Domov</a></div>
+        <div class="menu-links"><a class="active" href="podatki.html">Podatki</a></div>
+        <div class="menu-links"><a href="ogrevanje.html">O ogrevanju</a></div>
+        <div class="menu-links" style="float:right;"><a href="index.html">Izpiši</a></div>
+      </div>
+    </header>
+    <div class="main centered-content" id="tloris">
+      <section class="content">
+        <form name="podatki" class="contentPodatki ozje">
+         <h3>Podatki o stanovanju</h3><br/>         
+         <span>Izolacija sten/oken:</span>
+         <select name="izolacija" required>
+          <option value="1.6">brez(enojno steklo)</option>
+          <option value="1.2">slaba cca 5 cm (dvojno steklo+žlahtni plin) </option>
+          <option value="1.0">dobra cca 10cm (dvojno steko+žlahtni plin)</option>
+          <option value="0.75">zelo dobra cca 20 cm (trojno steklo+žlahtni plin)</option>
+         </select>
+        <br>
+         <span>Izolacija tal/stropa:</span>
+         <select name="izolacija2" required>
+          <option value="0.9">zelo dobro izoliran tla in strop</option>
+          <option value="1">dobro izolirana tla in strop</option>
+          <option value="1.15">brez ali slabo izolirana tla in strop</option>
+         </select>
+        <br>
+         <span>Št. zunanjih sten:</span>
+         <select name="stene" required>
+          <option value="0.9">brez zunanjih sten</option>
+          <option value="1">1 zunanja stena</option>
+          <option value="1.1">2 zunanji steni</option>
+          <option value="1.2">3 zunanje stene</option>
+          <option value="1.3">4 zunanje stene</option>
+         </select>
+        <br>
+         <span>Letni temperaturni primanjklaj:</span>
+         <ul class="flex-container wrap">
+          <input type="radio" value="0.85" name="temp-primankljaj" > pod 3000 (primer Portorož)<br>
+          <input type="radio" value="1" name="temp-primankljaj" > 3000-4000 (primer Ljubljana)<br>
+          <input type="radio" value="1.15" name="temp-primankljaj" > nad 4000 (primer Babno polje)<br>
+        </ul>
+         <span>Način montaže:  </span>
+          <ul class="flex-container wrap">
+          <input type="radio" value="1" name="montaza" > Stropna montaža<br>
+          <input type="radio" value="1.2" name="montaza"> Stenska montaža<br>
+          </ul>
+        <br><br>
+        <button type="submit" >Shrani</button>
+        </form>
+      </section>
+    </div>
+    <footer>
+      <span>
+        Spletno stran izdelal Klemen Moderc
+      </span>
+    </footer>
+  </body>
+</html> 
